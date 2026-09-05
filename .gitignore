@@ -1,0 +1,48 @@
+# ── Secretos — nunca deben subirse ──
+# config.php lleva la contraseña real de la base de datos y las claves de sesión/cron.
+api/config.php
+
+# Overrides locales de Vite (convención estándar) — no los usa este proyecto todavía, pero se
+# ignoran por si algún día creas uno con datos propios que no quieras compartir.
+# (frontend/.env.production SÍ se sube: solo tiene URLs públicas del CDN de imágenes, no hay
+# ningún secreto en él, y hace falta en el repo para que un "npm run build" limpio funcione bien.)
+frontend/.env.local
+frontend/.env.*.local
+
+# ── Backend Node/Docker antiguo — sustituido por el backend PHP + MariaDB de api/ ──
+# Se dejan aquí en lugar de borrarlos a mano: así no viajan al repo, pero siguen en tu carpeta
+# por si quieres consultarlos o borrarlos tú mismo más adelante.
+data/
+api/server.js
+api/package.json
+api/package-lock.json
+api/Dockerfile
+api/node_modules/
+docker-compose.yml
+Dockerfile
+nginx.conf
+render.yaml
+web/
+scripts/fetch-media.sh
+website/
+docs/SELF_HOSTING.md
+
+# ── Dependencias y artefactos generados — se recrean con npm install / npm run build ──
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# App móvil (Capacitor) — el proyecto en sí se mantiene en git, pero no sus carpetas de build
+frontend/android/app/build/
+frontend/android/.gradle/
+frontend/android/local.properties
+frontend/ios/Pods/
+frontend/ios/build/
+frontend/ios/DerivedData/
+
+# ── Editor / sistema operativo ──
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
